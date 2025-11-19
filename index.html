@@ -1,47 +1,40 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>俄罗斯方块</title>
+    <title>Neon Tetris</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="game-container">
         <div class="game-info">
-            <h1>俄罗斯方块</h1>
-            <div class="score-board">
-                <div>分数: <span id="score">0</span></div>
-                <div>等级: <span id="level">1</span></div>
-                <div>消除行数: <span id="lines">0</span></div>
+            <h1>TETRIS</h1>
+            <div class="score-box">
+                <h2>Score</h2>
+                <p id="score">0</p>
+            </div>
+            <div class="level-box">
+                <h2>Level</h2>
+                <p id="level">1</p>
+            </div>
+            <div class="next-piece-box">
+                <h2>Next</h2>
+                <canvas id="next-piece" width="80" height="80"></canvas>
+            </div>
+            <button id="start-btn">Start Game</button>
+            <div class="controls-info">
+                <p>← → : Move</p>
+                <p>↑ : Rotate</p>
+                <p>↓ : Soft Drop</p>
             </div>
         </div>
-
-        <div class="game-area">
-            <canvas id="game-board" width="300" height="600"></canvas>
-            <div class="next-piece">
-                <h3>下一个</h3>
-                <canvas id="next-canvas" width="120" height="120"></canvas>
-            </div>
-        </div>
-
-        <div class="game-controls">
-            <button id="start-btn">开始游戏</button>
-            <button id="pause-btn">暂停</button>
-            <button id="reset-btn">重置</button>
-        </div>
-
-        <div class="instructions">
-            <p>操作说明:</p>
-            <ul>
-                <li>← → 左右移动</li>
-                <li>↓ 快速下降</li>
-                <li>↑ 旋转方块</li>
-                <li>空格 直接落到底部</li>
-            </ul>
-        </div>
+        <canvas id="tetris" width="200" height="400"></canvas>
     </div>
-
     <script src="tetris.js"></script>
 </body>
+
 </html>
